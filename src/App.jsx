@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import LibraryView from './components/library/LibraryView'
 import './App.css'
 
-function App() {
+export default function App() {
   return (
-    <>
-      <section>
-        <h1>Game's Library</h1>
-      </section>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LibraryView />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App;
