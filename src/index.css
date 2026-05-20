@@ -1,23 +1,90 @@
+@font-face {
+  font-family: 'AudioWave';
+  src: url('/src/assets/fonts/Audiowide-Regular.woff2') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CourierPrime';
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Regular.woff2') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CourierPrime-Italic';
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Italic.woff2') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CourierPrime-Bold';
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Bold.woff2') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CourierPrime-BoldItalic';
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-BoldItalic.woff2') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BitCountPropSingleInk';
+  src: url('/src/assets/fonts/BitCountPropSingleInk.woff2') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreBarcode';
+  src: url('/src/assets/fonts/LibreBarcode128Text-Regular.woff2') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
+  --text: #9a96aa;
+  --text-h: #EEEEEE;
+  --bg: #0A0A12;
+  --border: rgba(255, 255, 255, 0.08);
+  --code-bg: #12121F;
+  --accent: #BF00FF;
+  --accent-bg: rgba(191, 0, 255, 0.12);
+  --accent-border: rgba(191, 0, 255, 0.45);
+  --social-bg: rgba(26, 26, 46, 0.6);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(191, 0, 255, 0.15) 0 10px 15px -3px, rgba(0, 0, 0, 0.4) 0 4px 6px -2px;
+
+  --color-primary:        #FF2D78;
+  --color-primary-glow:   rgba(255, 45, 120, 0.35);
+  --color-secondary:      #00F5FF;
+  --color-secondary-glow: rgba(0, 245, 255, 0.35);
+  --color-accent:         #BF00FF;
+  --color-accent-glow:    rgba(191, 0, 255, 0.35);
+  --color-warning:        #F5FF00;
+  --color-success:        #39FF14;
+  --color-notification:   #FF6B00;
+
+  --bg-surface:   #12121F;
+  --bg-elevated:  #1A1A2E;
+  --bg-overlay:   rgba(10, 10, 18, 0.85);
+
+  --glow-primary: 0 0 12px rgba(255, 45, 120, 0.6), 0 0 32px rgba(255, 45, 120, 0.3);
+  --glow-cyan:    0 0 12px rgba(0, 245, 255, 0.6),  0 0 32px rgba(0, 245, 255, 0.3);
+  --glow-purple:  0 0 12px rgba(191, 0, 255, 0.6),  0 0 32px rgba(191, 0, 255, 0.3);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --heading: 'Share Tech Mono', 'Courier New', monospace;
+  --mono: 'Share Tech Mono', ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+  color-scheme: dark;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -30,23 +97,20 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* The arcade theme is dark-only. If you ever need a light mode, override here. */
+@media (prefers-color-scheme: light) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
+    --text: #9a96aa;
+    --text-h: #EEEEEE;
+    --bg: #0A0A12;
+    --border: rgba(255, 255, 255, 0.08);
+    --code-bg: #12121F;
+    --accent: #BF00FF;
+    --accent-bg: rgba(191, 0, 255, 0.12);
+    --accent-border: rgba(191, 0, 255, 0.45);
+    --social-bg: rgba(26, 26, 46, 0.6);
     --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+      rgba(191, 0, 255, 0.15) 0 10px 15px -3px, rgba(0, 0, 0, 0.4) 0 4px 6px -2px;
   }
 }
 
@@ -77,6 +141,7 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+  text-shadow: 0 0 10px var(--color-primary), 0 0 28px var(--color-primary-glow);
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
@@ -87,6 +152,7 @@ h2 {
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+  color: var(--color-secondary);
   @media (max-width: 1024px) {
     font-size: 20px;
   }
@@ -100,7 +166,7 @@ code,
   font-family: var(--mono);
   display: inline-flex;
   border-radius: 4px;
-  color: var(--text-h);
+  color: var(--color-secondary);
 }
 
 code {
@@ -108,4 +174,5 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+  border: 1px solid var(--accent-border);
 }
