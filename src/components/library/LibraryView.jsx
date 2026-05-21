@@ -1,11 +1,13 @@
+import LiftScreen from '../layouts/LiftScreen'
 import GamesLibrary from './GamesLibrary'
-import Header from '../ui/Header'
+import styles from './LibraryView.module.css'
+
 
 export default function LibraryView() {
     return (
-        <main>
-            <Header />
+        <div className={styles.libraryView}>
+            <LiftScreen />
             <GamesLibrary />
-        </main>
+        </div>
     )
 }
