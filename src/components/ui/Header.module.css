@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 3px solid purple;
+}
+
+.header h2 {
+    margin: 0px 20px;
+}
+
+.navContainer {
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+ 
+}
+
+.navLink {
+    background-color: var(--accent-border);
+    color: var(--text);
+    padding: 5px 5px 0px 5px;
+    margin: 5px 5px 0px 5px;
+    border-radius: 6px 6px 0px 0px;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    cursor: pointer;
+    color: var(--accent);
+}
