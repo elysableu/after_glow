@@ -9,9 +9,9 @@ export default function Header() {
             <h2>AG</h2>
             <section className={styles.navContainer}>
                 <nav className={styles.nav}>
-                    <Link to="/" className={styles.navLink}>Home</Link>
                     <Link to="/" className={styles.navLink}>About</Link>
-                    <Link to="/" className={styles.navLink}>Games Library</Link>
+                    <Link to="/" className={styles.navLink}>Game Library</Link>
+                    <Link to="/" className={styles.navLink}>Request A Game</Link>
                 </nav>
             </section>
         </header>
