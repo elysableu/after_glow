@@ -174,9 +174,16 @@ main {
   border-radius: 15px;
   border: 3px solid purple;
   background: var(--bg);
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   height: 100px;
   flex-shrink: 0;
+}
+
+.routeContent {
+    flex: 1;
+    overflow: auto;
 }

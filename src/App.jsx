@@ -13,9 +13,11 @@ export default function App() {
         <main>
           <LiftScreen lifted={lifted} onStart={() => setLifted(true)} />
           <Header />
-          <Routes>
-            <Route path="/" element={<LibraryView />} />
-          </Routes>
+          <div className="routeContent">
+            <Routes>
+              <Route path="/" element={<LibraryView />} />
+            </Routes>
+          </div>
         </main>
       </BrowserRouter>
     </>
