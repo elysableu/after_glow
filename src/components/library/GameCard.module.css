@@ -1,0 +1,62 @@
+.gameCard {
+    width: 200px;
+    height: 240px;
+    margin: 20px 40px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+    border-radius: 7%;
+}
+
+.thumbnailContainer {
+    position: relative;
+}
+
+.badges {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.status {
+
+}
+
+.playerCount {
+
+}
+
+.detailsContainer {
+
+}
+
+.info {
+
+}
+
+.genre {
+
+}
+
+.difficulty {
+
+}
+
+.diffDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.on {
+    background-color: var(--color-warning);
+}
+
+.off {
+    background-color: var(--border);
+}
+
+.gameNav {
+
+}
