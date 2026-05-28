@@ -1,52 +1,118 @@
 .gameCard {
-    width: 200px;
-    height: 240px;
-    margin: 20px 40px;
-    padding: 15px 20px;
+    width: 240px;
+    height: 320px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: solid 1px grey;
     border-radius: 7%;
 }
 
+.gameCard h4 {
+    padding: 0px 10px;
+    margin: 0px;
+    text-align: left;
+}
+
 .thumbnailContainer {
+    flex: 1;
     position: relative;
+    height: 150px;
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.thumbnailContainer img {
+    height: 100px;
+    transform: scale(0.8);
+}
+
+.cardGenre {
+    transform: scale(1.2) !important;
 }
 
 .badges {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 15px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    font-size: small;
 }
 
 .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 6px;
+    border-radius: 15px;
+    color: var(--bg);
+}
 
+.live {
+    background-color: var(--color-success);
+}
+
+.soon {
+    background-color: var(--color-notification);
 }
 
 .playerCount {
+    background-color: gray;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 6px;
+    border-radius: 15px;
 
+}
+
+.detailNavContainer {
+    width: 100%;
+    background-color: var(--accent-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 0;
+    margin-top: 10px;
+    box-sizing: border-box;
 }
 
 .detailsContainer {
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 10px;
 }
 
 .info {
-
+    display: flex;
+    align-items: center;
 }
 
 .genre {
-
+    padding: 0 10px;
+    font-size: small;
 }
 
 .difficulty {
-
+    display: flex;
 }
 
 .diffDot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    margin: 2px;
 }
 
 .on {
@@ -55,8 +121,28 @@
 
 .off {
     background-color: var(--border);
+    border: 0.5px solid gray;
 }
 
 .gameNav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 10px;
+    padding: 7px 20px;
+    box-sizing: border-box;
+}
 
+.gameNav button {
+    border-radius: 7px;
+}
+
+.playRoute {
+    flex: 2;
+}
+
+.gameRoute {
+    flex: 1;
 }
