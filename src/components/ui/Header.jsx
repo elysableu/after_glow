@@ -10,8 +10,8 @@ export default function Header() {
             <section className={styles.navContainer}>
                 <nav className={styles.nav}>
                     <Link to="/about" className={styles.navLink}>About</Link>
-                    <Link to="/" className={styles.navLink}>Game Library</Link>
-                    <Link to="/" className={styles.navLink}>Request A Game</Link>
+                    <Link to="/" className={styles.navLink}>Library</Link>
+                    <Link to="/request" className={styles.navLink}>Request</Link>
                 </nav>
             </section>
         </header>
