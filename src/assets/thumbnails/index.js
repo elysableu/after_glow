@@ -1,3 +1,8 @@
 export { default as boardThumb } from './Chess_Icon.svg'
 export { default as cardThumb } from './Playing_Card_SVG.svg'
 export { default as videoThumb } from './Games_Icons.svg'
+export { default as heartThumb } from './Memory_Pixel_Heart_Icon.svg'
+export { default as unlockThumb } from './Lock_Open_Icon.svg'
+export { default as doorThumb } from './Door_Open_Icon.svg'
+export { default as codeThumb } from './Memory_Pixel_Code_Icon.svg'
+export { default as gameboyThumb } from './Memory_Pixel_Gameboy_Icon.svg'

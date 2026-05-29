@@ -4,8 +4,8 @@ import AboutStory from './AboutStory'
 export default function AboutView() {
     return (
         <div className={styles.aboutView}>
-        <h2>About AG</h2>
-           <AboutStory />
+            <h2>About AG</h2>
+            <AboutStory />
         </div>
     )
 }

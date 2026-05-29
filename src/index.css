@@ -1,48 +1,48 @@
 @font-face {
   font-family: 'AudioWave';
-  src: url('/src/assets/fonts/Audiowide-Regular.woff2') format('truetype');
+  src: url('/src/assets/fonts/Audiowide-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CourierPrime';
-  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Regular.woff2') format('truetype');
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CourierPrime-Italic';
-  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Italic.woff2') format('truetype');
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'CourierPrime-Bold';
-  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Bold.woff2') format('truetype');
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CourierPrime-BoldItalic';
-  src: url('/src/assets/fonts/CourierPrime/CourierPrime-BoldItalic.woff2') format('truetype');
+  src: url('/src/assets/fonts/CourierPrime/CourierPrime-BoldItalic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'BitCountPropSingleInk';
-  src: url('/src/assets/fonts/BitCountPropSingleInk.woff2') format('truetype');
+  font-family: 'BitCountPropSingle';
+  src: url('/src/assets/fonts/BitcountPropSingle-VariableFont.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LibreBarcode';
-  src: url('/src/assets/fonts/LibreBarcode128Text-Regular.woff2') format('truetype');
+  src: url('/src/assets/fonts/LibreBarcode128Text-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }

@@ -6,8 +6,8 @@ export default function AboutStory() {
 
     return (
         <div className={styles.story}>
-            {Object.entries(ABOUT).map( ([ title, chapter ]) => 
-                <AboutChapter key={title} title={title} chapter={chapter}/>
+            {ABOUT.map( chapter => 
+                <AboutChapter key={chapter.title} {...chapter}/>
             )}
         </div>
     )
