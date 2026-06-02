@@ -1,5 +1,9 @@
 .requestToggle {
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 10px;
+    margin-right: 80px;
 }
 
 .switch {
@@ -24,9 +28,74 @@
     background-color: var(--bg);
     border-radius: 0.1em;
     overflow: hidden;
-    transition: 0.4s;
-    box-shadow: -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
-        0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg);
+    transition: box-shadow 0.4s;
+    animation: pulsate 1.5s infinite alternate;
+    box-shadow:
+        -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+        0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg),
+        0 0 0.2rem #fff,
+        0 0 2rem var(--color-accent),
+        0 0 0.8rem var(--color-accent),
+        0 0 2.8rem var(--color-accent),
+        inset 0 0 1.3rem var(--color-accent-glow);
+}
+
+.switch input:checked + .toggle {
+    animation: pulsate-cyan 1.5s infinite alternate;
+    box-shadow:
+        -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+        0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg),
+        0 0 0.2rem #fff,
+        0 0 2rem var(--color-secondary),
+        0 0 0.8rem var(--color-secondary),
+        0 0 2.8rem var(--color-secondary),
+        inset 0 0 1.3rem var(--color-secondary-glow);
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow:
+            -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+            0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg),
+            0 0 0.1rem #fff,
+            0 0 1rem var(--color-accent),
+            0 0 0.4rem var(--color-accent),
+            0 0 1.4rem var(--color-accent),
+            inset 0 0 0.6rem var(--color-accent-glow);
+    }
+    100% {
+        box-shadow:
+            -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+            0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg),
+            0 0 0.2rem #fff,
+            0 0 2rem var(--color-accent),
+            0 0 0.8rem var(--color-accent),
+            0 0 2.8rem var(--color-accent),
+            inset 0 0 1.3rem var(--color-accent-glow);
+    }
+}
+
+@keyframes pulsate-cyan {
+    0% {
+        box-shadow:
+            -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+            0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg),
+            0 0 0.1rem #fff,
+            0 0 1rem var(--color-secondary),
+            0 0 0.4rem var(--color-secondary),
+            0 0 1.4rem var(--color-secondary),
+            inset 0 0 0.6rem var(--color-secondary-glow);
+    }
+    100% {
+        box-shadow:
+            -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+            0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg),
+            0 0 0.2rem #fff,
+            0 0 2rem var(--color-secondary),
+            0 0 0.8rem var(--color-secondary),
+            0 0 2.8rem var(--color-secondary),
+            inset 0 0 1.3rem var(--color-secondary-glow);
+    }
 }
 
 .toggle > .left {
@@ -35,7 +104,7 @@
     width: 50%;
     height: 88%;
     background-color: var(--bg-surface);
-    color: var(--color-accent);          /* was --color-primary */
+    color: var(--color-accent);
     left: 0;
     bottom: 0;
     align-items: center;
@@ -105,7 +174,7 @@
 
 .switch input:checked + .toggle > .left {
     transform: rotateX(10deg) rotateY(45deg);
-    color: var(--accent-border);        
+    color: var(--accent-border);
 }
 
 .switch input:checked + .toggle > .right {
@@ -118,17 +187,21 @@
     height: 0.4em;
     border-radius: 50%;
     background-color: var(--color-accent);
-    transition: background-color 150ms;
+    transition: background-color 150ms, box-shadow 150ms;
+    box-shadow: 0 0 0.2rem var(--color-accent), 0 0 0.6rem var(--color-accent-glow);
 }
 
 .right .dot {
     background-color: var(--color-secondary-glow);
+    box-shadow: 0 0 0.2rem var(--color-secondary-glow), 0 0 0.6rem var(--color-secondary-glow);
 }
 
 .switch input:checked + .toggle > .left .dot {
     background-color: var(--accent-border);
+    box-shadow: 0 0 0.2rem var(--accent-border), 0 0 0.6rem var(--color-accent-glow);
 }
 
 .switch input:checked + .toggle > .right .dot {
     background-color: var(--color-secondary);
+    box-shadow: 0 0 0.2rem var(--color-secondary), 0 0 0.6rem var(--color-secondary-glow);
 }
