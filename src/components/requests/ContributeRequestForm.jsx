@@ -3,6 +3,8 @@ import styles from './ContributeRequestForm.module.css'
 export default function ContributeRequestForm() {
     return (
         <div className={styles.contributeForm}>
+            <h3>Player 2, press start</h3>
+            <p>We're a small team and the arcade is growing. If you want to build games, write docs, or just get involved — this is where you start. All skill levels welcome.</p>
             {/* 
                 Information collected =>
                     - Name

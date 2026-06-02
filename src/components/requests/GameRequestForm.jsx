@@ -3,6 +3,8 @@ import styles from './GameRequestForm.module.css'
 export default function GameRequestForm() {
     return (
          <div className={styles.gameForm}>
+            <h3>What's missing from the arcade?</h3>
+            <p>Got a game stuck in your head? Drop the title and we'll add it to the build queue. All genres welcome.</p>
             <form>
                 {/* 
                     Information collected =>
