@@ -7,22 +7,28 @@ export default function RequestToggle({isContribute, setIsContribute}) {
 
     return (
         <div className={styles.requestToggle}>
-            <label className={styles.switch}>
-                <input 
-                    className={styles.checkbox} 
-                    type="checkbox" 
-                    checked={isContribute}
-                    onChange={handleToggle}
-                    />
-                <span className={styles.toggle}>
-                    <span className={styles.left} >
-                        <span className={styles.dot}></span>
+            <div className="panel-housing">
+                <div className="panel-screw tl"></div>
+                <div className="panel-screw tr"></div>
+                <div className="panel-screw bl"></div>
+                <div className="panel-screw br"></div>
+                <label className={styles.switch}>
+                    <input 
+                        className={styles.checkbox} 
+                        type="checkbox" 
+                        checked={isContribute}
+                        onChange={handleToggle}
+                        />
+                    <span className={styles.toggle}>
+                        <span className={styles.left} >
+                            <span className={styles.dot}></span>
+                        </span>
+                        <span className={styles.right}>
+                            <span className={styles.dot}></span>
+                        </span>
                     </span>
-                    <span className={styles.right}>
-                        <span className={styles.dot}></span>
-                    </span>
-                </span>
-            </label>
+                </label>
+            </div> 
         </div>
     )
 }
