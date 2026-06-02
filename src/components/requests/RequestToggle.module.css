@@ -1,0 +1,167 @@
+.requestToggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin-right: 80px;
+}
+
+.switch {
+    position: relative;
+    display: block;
+    width: 5em;
+    height: 2.5em;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.switch .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle {
+    --glow-color: var(--color-accent);
+    --glow-color-soft: var(--color-accent-glow);
+    --glow-frame: -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+                   0.3em 0 0 0 var(--bg),  0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg);
+    position: absolute;
+    left: 0;
+    top: -0.1em;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    border-radius: 0.1em;
+    overflow: hidden;
+    transition: box-shadow 0.4s;
+    animation: pulsate-glow 1.5s infinite alternate;
+    box-shadow:
+    var(--glow-frame),
+    0 0 0.2rem 0.03rem #fff,
+    0 0 2rem 0.1rem var(--glow-color),
+    0 0 0.8rem 0.08rem var(--glow-color),
+    0 0 2.8rem 0.2rem var(--glow-color),
+    inset 0 0 0.8rem var(--glow-color-soft);
+}
+
+.switch input:checked + .toggle {
+    --glow-color: var(--color-secondary);
+    --glow-color-soft: var(--color-secondary-glow);
+    box-shadow:
+        var(--glow-frame),
+        0 0 0.2rem 0.03rem #fff,
+        0 0 2rem 0.1rem var(--glow-color),
+        0 0 0.8rem 0.1rem var(--glow-color),
+        0 0 2.8rem 0.2rem var(--glow-color),
+        inset 0 0 0.8rem var(--glow-color-soft);
+}
+
+.toggle > .left {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 88%;
+    background-color: var(--bg-surface);
+    color: var(--color-accent);
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transform-origin: right;
+    transform: rotateX(10deg);
+    transform-style: preserve-3d;
+    transition: all 150ms;
+}
+
+.left::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-elevated);
+    transform-origin: center left;
+    transform: rotateY(90deg);
+}
+
+.left::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    transform-origin: center bottom;
+    transform: rotateX(90deg);
+}
+
+.toggle > .right {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 88%;
+    background-color: var(--bg-surface);
+    color: var(--color-secondary-glow);
+    right: 1px;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transform-origin: left;
+    transform: rotateX(10deg) rotateY(-45deg);
+    transform-style: preserve-3d;
+    transition: all 150ms;
+}
+
+.right::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-elevated);
+    transform-origin: center right;
+    transform: rotateY(-90deg);
+}
+
+.right::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    transform-origin: center bottom;
+    transform: rotateX(90deg);
+}
+
+.switch input:checked + .toggle > .left {
+    transform: rotateX(10deg) rotateY(45deg);
+    color: var(--accent-border);
+}
+
+.switch input:checked + .toggle > .right {
+    transform: rotateX(10deg) rotateY(0deg);
+    color: var(--color-secondary);
+}
+
+.dot {
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    transition: background-color 150ms, box-shadow 150ms;
+    box-shadow: 0 0 0.2rem var(--color-accent), 0 0 0.6rem var(--color-accent-glow);
+}
+
+.right .dot {
+    background-color: var(--color-secondary-glow);
+    box-shadow: 0 0 0.2rem var(--color-secondary-glow), 0 0 0.6rem var(--color-secondary-glow);
+}
+
+.switch input:checked + .toggle > .left .dot {
+    background-color: var(--accent-border);
+    box-shadow: 0 0 0.2rem var(--accent-border), 0 0 0.6rem var(--color-accent-glow);
+}
+
+.switch input:checked + .toggle > .right .dot {
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 0.2rem var(--color-secondary), 0 0 0.6rem var(--color-secondary-glow);
+}
