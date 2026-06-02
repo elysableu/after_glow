@@ -1,0 +1,134 @@
+.requestToggle {
+    padding: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 2.5em;
+    user-select: none;
+}
+
+.switch .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    border-radius: 0.1em;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: -0.3em 0 0 0 var(--bg), -0.3em 0.3em 0 0 var(--bg),
+        0.3em 0 0 0 var(--bg), 0.3em 0.3em 0 0 var(--bg), 0 0.3em 0 0 var(--bg);
+}
+
+.toggle > .left {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 88%;
+    background-color: var(--bg-surface);
+    color: var(--color-accent);          /* was --color-primary */
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transform-origin: right;
+    transform: rotateX(10deg);
+    transform-style: preserve-3d;
+    transition: all 150ms;
+}
+
+.left::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-elevated);
+    transform-origin: center left;
+    transform: rotateY(90deg);
+}
+
+.left::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    transform-origin: center bottom;
+    transform: rotateX(90deg);
+}
+
+.toggle > .right {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 88%;
+    background-color: var(--bg-surface);
+    color: var(--color-secondary-glow);
+    right: 1px;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transform-origin: left;
+    transform: rotateX(10deg) rotateY(-45deg);
+    transform-style: preserve-3d;
+    transition: all 150ms;
+}
+
+.right::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-elevated);
+    transform-origin: center right;
+    transform: rotateY(-90deg);
+}
+
+.right::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    transform-origin: center bottom;
+    transform: rotateX(90deg);
+}
+
+.switch input:checked + .toggle > .left {
+    transform: rotateX(10deg) rotateY(45deg);
+    color: var(--accent-border);        
+}
+
+.switch input:checked + .toggle > .right {
+    transform: rotateX(10deg) rotateY(0deg);
+    color: var(--color-secondary);
+}
+
+.dot {
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    transition: background-color 150ms;
+}
+
+.right .dot {
+    background-color: var(--color-secondary-glow);
+}
+
+.switch input:checked + .toggle > .left .dot {
+    background-color: var(--accent-border);
+}
+
+.switch input:checked + .toggle > .right .dot {
+    background-color: var(--color-secondary);
+}
